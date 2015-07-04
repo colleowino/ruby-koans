@@ -67,7 +67,7 @@ class AboutArrays < Neo::Koan
 
     popped_value = array.pop
     assert_equal :last, popped_value
-    assert_equal __, array
+    assert_equal [1,2], array
   end
 
   def test_shifting_arrays
