@@ -17,6 +17,8 @@ def triangle(a, b, c)
 	result =  
 		if a+b+c == 0
 			raise TriangleError.new("Testing non existent sides")
+		elsif a < 0 or b < 0 or c < 0
+			raise TriangleError.new("testing for -ve valued sides")
 		elsif a == b and b == c
 		 	:equilateral
 		elsif a == b or b == c or a == c
