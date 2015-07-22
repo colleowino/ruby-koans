@@ -22,6 +22,13 @@ def triangle(a, b, c)
 		elsif a == b and b == c
 		 	:equilateral
 		elsif a == b or b == c or a == c
+
+				# comparing the sizes and seeing if the smaller one appears more than the larger side.
+				sides = [a,b,c]
+				min = sides.min
+				if sides.count(min) == 2
+					raise TriangleError.new("raise an the 2 equal sides are smaller")
+				end
 			:isosceles
 		else
 			:scalene
