@@ -15,13 +15,15 @@
 #
 def triangle(a, b, c)
 	result =  
-	 if a == b and b == c
-	 	:equilateral
-	 elsif a == b or b == c or a == c
-	 	:isosceles
-	 else
-	 	:scalene
-	 end
+		if a+b+c == 0
+			raise TriangleError.new("Testing non existent sides")
+		elsif a == b and b == c
+		 	:equilateral
+		elsif a == b or b == c or a == c
+			:isosceles
+		else
+			:scalene
+		end
 end
 
 # Error class used in part 2.  No need to change this code.
