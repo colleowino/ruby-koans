@@ -120,6 +120,8 @@ class AboutIteration < Neo::Koan
   #
   #   file = File.open(filename)
   #   # code to read 'file'
+  #   I guess its cause its more compact and clean way to do things
+  #   The main reason is that the file could be non existent, this checks first.
   #
   # When you get to the "AboutSandwichCode" koan, recheck your answer.
 
